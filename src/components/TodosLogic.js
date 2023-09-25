@@ -48,10 +48,21 @@ const addTodosItem =(title)=>{
     setTodos([...todos, newTodo])
 
 }
+const setUpdate =(setUpdatedTitle, id)=>{
+    setTodos(
+        todos.map((todo)=>{
+            if(todo.id===id){
+                todo.title = setUpdatedTitle
+            }
+            return todo
+        })
+    )
+
+}
   return (
   <div>
   <InputTodo addTodosItem={addTodosItem}/>
-  <TodoList todosProps={todos} handleChange={handleChange} deleTodo={deleTodo}/>
+  <TodoList todosProps={todos} handleChange={handleChange} deleTodo={deleTodo} setUpdate={setUpdate}/>
   </div>
   )
 }
