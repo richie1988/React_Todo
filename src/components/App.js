@@ -1,10 +1,12 @@
-import React from "react"
-import TodosLogic from "./TodosLogic";
-import "./Todo.css"
+import React from 'react';
+import TodosLogic from './TodosLogic';
+import './Todo.css';
+
 function App() {
   return (
-    <div>
-        <TodosLogic/>
+    <div className="main-container">
+      <h2>My Today&apos;s TodoList</h2>
+      <TodosLogic />
     </div>
   );
 }
